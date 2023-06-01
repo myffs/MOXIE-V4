@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Derek.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Down0000" x="0" y="0" width="203" height="148"/>
+	<SubTexture name="Down0001" x="203" y="0" width="203" height="148"/>
+	<SubTexture name="Left0000" x="406" y="0" width="173" height="222"/>
+	<SubTexture name="Left0001" x="579" y="0" width="173" height="222"/>
+	<SubTexture name="Right0000" x="752" y="0" width="251" height="187"/>
+	<SubTexture name="Right0001" x="0" y="222" width="251" height="187"/>
+	<SubTexture name="Up0000" x="251" y="222" width="144" height="285"/>
+	<SubTexture name="Up0001" x="395" y="222" width="144" height="285"/>
+	<SubTexture name="idle0000" x="539" y="222" width="126" height="228"/>
+	<SubTexture name="idle0001" x="665" y="222" width="126" height="228"/>
+</TextureAtlas>

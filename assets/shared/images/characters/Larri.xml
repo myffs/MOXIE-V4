@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Larri.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Down0000" x="0" y="0" width="158" height="148"/>
+	<SubTexture name="Down0001" x="158" y="0" width="158" height="148"/>
+	<SubTexture name="Idle0000" x="316" y="0" width="211" height="278"/>
+	<SubTexture name="Idle0001" x="527" y="0" width="211" height="278"/>
+	<SubTexture name="Left0000" x="738" y="0" width="189" height="228"/>
+	<SubTexture name="Left0001" x="0" y="278" width="189" height="228"/>
+	<SubTexture name="Right0000" x="189" y="278" width="263" height="281"/>
+	<SubTexture name="Right0001" x="452" y="278" width="263" height="281"/>
+	<SubTexture name="Up0000" x="715" y="278" width="225" height="235"/>
+	<SubTexture name="Up0001" x="0" y="559" width="225" height="235"/>
+</TextureAtlas>

@@ -1,22 +1,43 @@
 {
-	"songs": [
-		["Bopeebo", "dad", [146, 113, 253]],
-		["Fresh", "dad", [146, 113, 253]],
-		["Dad Battle", "dad", [146, 113, 253]]
-	],
-
-	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
-	],
-	"weekBackground": "stage",
-
-	"storyName": "Daddy Dearest",
-	"weekBefore": "tutorial",
-	"weekName": "Week 1",
+	"storyName": "fast burnt!!!",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"weekBefore": "",
 	"startUnlocked": true,
-
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"songs": [
+		[
+			"Moopy",
+			"moxie",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Lorrus",
+			"larri",
+			[
+				255,
+				0,
+				0
+			]
+		],
+		[
+			"Dorkly",
+			"derek",
+			[
+				0,
+				113,
+				253
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "It's v4 time!"
 }
