@@ -1,0 +1,43 @@
+{
+	"storyName": "fast burnt!!!",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"weekBefore": "",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"songs": [
+		[
+			"Moopy",
+			"moxie",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Lorrus",
+			"larri",
+			[
+				255,
+				0,
+				0
+			]
+		],
+		[
+			"Dorkly",
+			"derek",
+			[
+				0,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "It's v4 time!"
+}

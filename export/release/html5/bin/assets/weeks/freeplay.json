@@ -1,0 +1,59 @@
+{
+	"storyName": "yea heard.",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"pico",
+		"gf",
+		"bf"
+	],
+	"songs": [
+		[
+			"Lunic",
+			"squid",
+			[
+				140,
+				200,
+				255
+			]
+		],
+		[
+			"Sped",
+			"epico",
+			[
+				0,
+				255,
+				255
+			]
+		],
+		[
+			"youare.",
+			"epico",
+			[
+				0,
+				195,
+				255
+			]
+		],
+		[
+			"SUS-POGMUS",
+			"red",
+			[
+				75,
+				0,
+				20
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "frepla",
+	"hiddenUntilUnlocked": false
+}
