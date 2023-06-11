@@ -31,11 +31,11 @@ class ControlsSubState extends MusicBeatSubstate {
 	private static var curSelected:Int = -1;
 	private static var curAlt:Bool = false;
 
-	private static var defaultKey:String = 'Reset to Default Keys';
+	private static var defaultKey:String = 'Reset Ur Mistakes'; // LMFAO
 	private var bindLength:Int = 0;
 
 	var optionShit:Array<Dynamic> = [
-		['NOTES'],
+		['ARROW KEYS'],
 		['Left', 'note_left'],
 		['Down', 'note_down'],
 		['Up', 'note_up'],
@@ -57,7 +57,7 @@ class ControlsSubState extends MusicBeatSubstate {
 		['Up', 'volume_up'],
 		['Down', 'volume_down'],
 		[''],
-		['DEBUG'],
+		['EXTRA'],
 		['Key 1', 'debug_1'],
 		['Key 2', 'debug_2']
 	];
