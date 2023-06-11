@@ -160,7 +160,7 @@ class PauseSubState extends MusicBeatSubstate
 		var daSelected:String = menuItems[curSelected];
 		switch (daSelected)
 		{
-			case 'Skip Time':
+			case 'Skip Time': //don't do this, if you do, you're lazy as fuck and can't play your own chart :rofl:
 				if (controls.UI_LEFT_P)
 				{
 					FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
@@ -210,18 +210,18 @@ class PauseSubState extends MusicBeatSubstate
 
 			switch (daSelected)
 			{
-				case "Resume":
+				case "Continue":
 					close();
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();
-				case 'Toggle Practice Mode':
+				case 'Practice For Losers':
 					PlayState.instance.practiceMode = !PlayState.instance.practiceMode;
 					PlayState.changedDifficulty = true;
 					practiceText.visible = PlayState.instance.practiceMode;
-				case "Restart Song":
+				case "Retry":
 					restartSong();
-				case "Leave Charting Mode":
+				case "Leave Ur Bad Charting":
 					restartSong();
 					PlayState.chartingMode = false;
 				case 'Skip Time':
@@ -239,16 +239,16 @@ class PauseSubState extends MusicBeatSubstate
 						}
 						close();
 					}
-				case "End Song":
+				case "End Yourself":
 					close();
 					PlayState.instance.finishSong(true);
-				case 'Toggle Botplay':
+				case 'Botplay for trash kids':
 					PlayState.instance.cpuControlled = !PlayState.instance.cpuControlled;
 					PlayState.changedDifficulty = true;
 					PlayState.instance.botplayTxt.visible = PlayState.instance.cpuControlled;
 					PlayState.instance.botplayTxt.alpha = 1;
 					PlayState.instance.botplaySine = 0;
-				case "Exit to menu":
+				case "Leave":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
 					if(PlayState.isStoryMode) {
