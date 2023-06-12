@@ -1,6 +1,6 @@
 {
 	"storyName": "yea heard.",
-	"difficulties": "",
+	"difficulties": "hard",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"freeplayColor": [
@@ -8,7 +8,7 @@
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
+	"weekBefore": "",
 	"startUnlocked": true,
 	"weekCharacters": [
 		"pico",
@@ -35,7 +35,7 @@
 			]
 		],
 		[
-			"youare.",
+			"youare",
 			"epico",
 			[
 				0,
@@ -50,6 +50,15 @@
 				75,
 				0,
 				20
+			]
+		],
+		[
+			"8TUNED",
+			"zack",
+			[
+				40,
+				40,
+				60
 			]
 		]
 	],

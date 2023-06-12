@@ -1,0 +1,50 @@
+{
+	"songs": [
+		[
+			"Rematch",
+			"dorek",
+			[
+				0,
+				0,
+				33
+			]
+		],
+		[
+			"Demand",
+			"dorek",
+			[
+				46,
+				0,
+				0
+			]
+		],
+		[
+			"Finals",
+			"dorek",
+			[
+				0,
+				20,
+				0
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"difficulties": "hard",
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"storyName": "...",
+	"weekName": "Week 2 - ...",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "",
+	"startUnlocked": true
+}
