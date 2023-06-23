@@ -17,7 +17,7 @@ class DiscordClient
 	{
 		trace("Discord Client starting...");
 		DiscordRpc.start({
-			clientID: "1114758804236664923",
+			clientID: "1121767234977673328", // finally fixed the discord rpc
 			onReady: onReady,
 			onError: onError,
 			onDisconnected: onDisconnected
@@ -42,7 +42,7 @@ class DiscordClient
 	static function onReady()
 	{
 		DiscordRpc.presence({
-			details: "In the Menus",
+			details: "In The Menus",
 			state: null,
 			largeImageKey: 'icon',
 			largeImageText: "Vs. Moxie"
