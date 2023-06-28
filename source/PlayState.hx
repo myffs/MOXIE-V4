@@ -77,7 +77,7 @@ class PlayState extends MusicBeatState
 		['Bad', 0.8], 
 		['Terrible', 0.9], 
 		['Disgusting!', 1], 
-		['GLEHH!!!!!!', 1]
+		['You Have Skill Issue', 1]
 	];
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
 	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
@@ -2309,9 +2309,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Note Misses: ' + songMisses + ' | Ur Grade: ' + ratingName;
+			scoreTxt.text = 'Score:  ' + songScore + ' | Note Misses: ' + songMisses + ' | Ur Skill: ' + ratingName;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Note Misses: ' + songMisses + ' | Ur Grade: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+			scoreTxt.text = 'Score:  ' + songScore + ' | Note Misses: ' + songMisses + ' | Ur Skill: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
 		}
 
 		if(botplayTxt.visible) {
@@ -2659,7 +2659,7 @@ class PlayState extends MusicBeatState
 				
 				#if desktop
 				// Game Over doesn't get his own variable because it's only used here
-				DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				DiscordClient.changePresence("You Won!! - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 				#end
 				isDead = true;
 				return true;
