@@ -79,6 +79,21 @@ class PlayState extends MusicBeatState
 		['blehhhh !!!', 1], 
 		['skill issue !!!!', 1]
 	];
+
+	public static var pointScore:Array<Dynamic> = [
+		// basically for the shop menu (BETA TESTING)
+		['0.0% (?)', 0.2],
+		['0.2% (x)', 0.4], 
+		['0.6% (x)', 0.5], 
+		['0.7% (x)', 0.6], 
+		['0.9% (-)', 0.69], 
+		['1.3% (-)', 0.7], 
+		['1.5% (-)', 0.8], 
+		['1.8% (+)', 0.9], 
+		['2.5% (+)', 1], 
+		['3.2% (+)', 1]
+	];
+
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
 	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
 	public var modchartTimers:Map<String, FlxTimer> = new Map<String, FlxTimer>();
@@ -344,7 +359,7 @@ class PlayState extends MusicBeatState
 		}
 
 		// String for when the game is paused
-		detailsPausedText = "Paused - " + detailsText;
+		detailsPausedText = "Im afk rn - " + detailsText;
 		#end
 
 		GameOverSubstate.resetVariables();
@@ -369,6 +384,8 @@ class PlayState extends MusicBeatState
 					curStage = 'school';
 				case 'thorns':
 					curStage = 'schoolEvil';
+				case 'nerd':
+						curStage = 'philly';
 				default:
 					curStage = 'stage';
 			}
@@ -2309,9 +2326,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score:  ' + songScore + ' | Note Misses: ' + songMisses + ' | Ur Skill: ' + ratingName;
+			scoreTxt.text = 'Score:  ' + songScore + ' | Misses: ' + songMisses + ' | Judgement: ' + ratingName + ' | Points: ' + pointScore;
 		} else {
-			scoreTxt.text = 'Score:  ' + songScore + ' | Note Misses: ' + songMisses + ' | Ur Skill: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+			scoreTxt.text = 'Score:  ' + songScore + ' | Misses: ' + songMisses + ' | Judgement: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC + ' | Points: ' + pointScore;//peeps wanted no integer rating
 		}
 
 		if(botplayTxt.visible) {
