@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="impostrr.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="0" y="0" width="171" height="221"/>
+	<SubTexture name="down0001" x="171" y="0" width="171" height="221"/>
+	<SubTexture name="down0002" x="342" y="0" width="171" height="221"/>
+	<SubTexture name="idle0000" x="513" y="0" width="149" height="199"/>
+	<SubTexture name="left0000" x="662" y="0" width="241" height="199"/>
+	<SubTexture name="left0001" x="0" y="221" width="241" height="199"/>
+	<SubTexture name="left0002" x="241" y="221" width="241" height="199"/>
+	<SubTexture name="right0000" x="482" y="221" width="204" height="199"/>
+	<SubTexture name="right0001" x="686" y="221" width="204" height="199"/>
+	<SubTexture name="right0002" x="0" y="420" width="204" height="199"/>
+	<SubTexture name="up0000" x="204" y="420" width="191" height="343"/>
+	<SubTexture name="up0001" x="395" y="420" width="191" height="343"/>
+	<SubTexture name="up0002" x="586" y="420" width="191" height="343"/>
+</TextureAtlas>

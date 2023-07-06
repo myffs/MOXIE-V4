@@ -68,16 +68,16 @@ class PlayState extends MusicBeatState
     
 	public static var ratingStuff:Array<Dynamic> = [
 		// you're just bad at fnf if you get a 100% tbh.
-		['Amazing!', 0.2],
-		['Sick!', 0.4], 
-		['Nice', 0.5], 
-		['Good', 0.6], 
-		['OK', 0.69], 
-		['Fine', 0.7], 
-		['Bad', 0.8], 
-		['Terrible', 0.9], 
-		['Disgusting!', 1], 
-		['You Have Skill Issue', 1]
+		['goat !!', 0.2],
+		['fire !', 0.4], 
+		['sick', 0.5], 
+		['epico.', 0.6], 
+		['meh', 0.69], 
+		['ok', 0.7], 
+		['shit', 0.8], 
+		['what.', 0.9], 
+		['blehhhh !!!', 1], 
+		['skill issue !!!!', 1]
 	];
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
 	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
@@ -3019,6 +3019,11 @@ class PlayState extends MusicBeatState
 			
 			case 'BG Freaks Expression':
 				if(bgGirls != null) bgGirls.swapDanceType();
+
+			case 'Gloomy Shader': //plz dont forget to code in this shade before the deadline
+			gloomyTxt = new FlxText(0, 0, 0, "Please code this in.", 16);
+			gloomyTxt.screenCenter();
+			add(gloomyTxt);
 			
 			case 'Change Scroll Speed':
 				if (songSpeedType == "constant")
