@@ -55,6 +55,9 @@ import Achievements;
 import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
+#if !flash
+import openfl.filters.ShaderFilter;
+#end
 #if sys
 import sys.FileSystem;
 #end
@@ -63,7 +66,7 @@ using StringTools;
 
 class PlayState extends MusicBeatState
 {
-	public static var STRUM_X = 42;
+	public static var STRUM_X = 48.5;
 	public static var STRUM_X_MIDDLESCROLL = -278;
     
 	public static var ratingStuff:Array<Dynamic> = [
@@ -3038,9 +3041,12 @@ class PlayState extends MusicBeatState
 				if(bgGirls != null) bgGirls.swapDanceType();
 
 			case 'Gloomy Shader': //plz dont forget to code in this shade before the deadline
-			gloomyTxt = new FlxText(0, 0, 0, "Please code this in.", 16);
-			gloomyTxt.screenCenter();
-			add(gloomyTxt);
+				final gloomyShader = new GloomyShader();
+				final shaders:Array<BitmapFilter> = [];
+				shaders.push(new ShaderFilter(gloomyShader));
+				camHUD.setFilters(shaders);
+				camHUD.useBgAlphaBlending = true;
+				camHUD.filtersEnabled = !ClientPrefs.lowQuality && value1.toLowerCase() == 'true';
 			
 			case 'Change Scroll Speed':
 				if (songSpeedType == "constant")
