@@ -84,17 +84,17 @@ class PlayState extends MusicBeatState
 	];
 
 	public static var pointScore:Array<Dynamic> = [
-		// basically for the shop menu (BETA TESTING)
-		['0.0% (?)', 0.2],
-		['0.2% (x)', 0.4], 
-		['0.6% (x)', 0.5], 
-		['0.7% (x)', 0.6], 
-		['0.9% (-)', 0.69], 
-		['1.3% (-)', 0.7], 
-		['1.5% (-)', 0.8], 
-		['1.8% (+)', 0.9], 
-		['2.5% (+)', 1], 
-		['3.2% (+)', 1]
+// literally just changed this to 'accuracy' too lazy for shop menu atm
+		['0%', 0.2],
+		['10%', 0.4], 
+		['20%', 0.5], 
+		['30%', 0.6], 
+		['40%', 0.69], 
+		['50%', 0.7], 
+		['60%', 0.8], 
+		['70%', 0.9], 
+		['80%', 1], 
+		['100%', 1]
 	];
 
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
@@ -192,6 +192,7 @@ class PlayState extends MusicBeatState
 	public var healthLoss:Float = 1;
 	public var instakillOnMiss:Bool = false;
 	public var cpuControlled:Bool = false;
+	//public var hellMode:Bool = true;
 	public var practiceMode:Bool = false;
 
 	public var botplaySine:Float = 0;
@@ -204,7 +205,7 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
 
-	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
+	var dialogue:Array<String> = ['fuk ur mom', 'markiplier plays FNAF 2'];
 	var dialogueJson:DialogueFile = null;
 
 	var halloweenBG:BGSprite;
@@ -316,14 +317,15 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-		// Gameplay settings
+		// Gameplay settings \\
 		healthGain = ClientPrefs.getGameplaySetting('healthgain', 1);
 		healthLoss = ClientPrefs.getGameplaySetting('healthloss', 1);
 		instakillOnMiss = ClientPrefs.getGameplaySetting('instakill', false);
 		practiceMode = ClientPrefs.getGameplaySetting('practice', false);
 		cpuControlled = ClientPrefs.getGameplaySetting('botplay', false);
+		//hellMode = ClientPrefs.getGameplaySetting('instakill when song starts', true); kinda funny
 
-		// var gameCam:FlxCamera = FlxG.camera;
+    // var gameCam:FlxCamera = FlxG.camera; \\
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
@@ -337,7 +339,7 @@ class PlayState extends MusicBeatState
 
 		FlxCamera.defaultCameras = [camGame];
 		CustomFadeTransition.nextCamera = camOther;
-		//FlxG.cameras.setDefaultDrawTarget(camGame, true);
+  // FlxG.cameras.setDefaultDrawTarget(camGame, true); \\
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -354,15 +356,15 @@ class PlayState extends MusicBeatState
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
 		{
-			detailsText = "Story Mode: " + WeekData.getCurrentWeek().weekName;
+			detailsText = "story time !: " + WeekData.getCurrentWeek().weekName;
 		}
 		else
 		{
-			detailsText = "Freeplay Menu";
+			detailsText = "feepay";
 		}
 
 		// String for when the game is paused
-		detailsPausedText = "Im afk rn - " + detailsText;
+		detailsPausedText = "you can't beat - " + detailsText;
 		#end
 
 		GameOverSubstate.resetVariables();
@@ -1206,6 +1208,7 @@ class PlayState extends MusicBeatState
 		#if desktop
 		// Updating Discord Rich Presence.
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+	// DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + songMisses +  ")", iconP2.getCharacter()); please test this feature before replacing it
 		#end
 
 		if(!ClientPrefs.controllerMode)
@@ -2329,9 +2332,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score:  ' + songScore + ' | Misses: ' + songMisses + ' | Judgement: ' + ratingName + ' | Points: ' + pointScore;
+			scoreTxt.text = 'Score:  ' + songScore + ' | missed !: ' + songMisses + ' | Rating: ' + ratingName + ' | Accuracy: ' + pointScore;
 		} else {
-			scoreTxt.text = 'Score:  ' + songScore + ' | Misses: ' + songMisses + ' | Judgement: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC + ' | Points: ' + pointScore;//peeps wanted no integer rating
+			scoreTxt.text = 'Score:  ' + songScore + ' | missed !: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC + ' | Accuracy: ' + pointScore;//peeps wanted no integer rating
 		}
 
 		if(botplayTxt.visible) {

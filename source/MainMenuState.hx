@@ -90,8 +90,12 @@ class MainMenuState extends MusicBeatState
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
 		add(magenta);
-		
-		// magenta.scrollFactor.set();
+		// stole this code from vs stupids main menu \\
+		var menuCharacter:FlxSprite = new FlxSprite(700).loadGraphic(Paths.image('moxieCharacter'));
+		menuCharacter.screenCenter(Y);
+		menuCharacter.scrollFactor.set(0, 0);
+		add(menuCharacter);
+		// might need to optimize cuz this will be animated \\
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -124,7 +128,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Vs Moxie v" + psychEngineVersion, 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Vs. Moxie v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);

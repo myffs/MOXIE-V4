@@ -17,7 +17,7 @@ class DiscordClient
 	{
 		trace("Discord Client starting...");
 		DiscordRpc.start({
-			clientID: "1126842572678107216", // finally fixed the discord rpc
+			clientID: "1126842572678107216", // updating this soon..
 			onReady: onReady,
 			onError: onError,
 			onDisconnected: onDisconnected
@@ -82,7 +82,7 @@ class DiscordClient
 			details: details,
 			state: state,
 			largeImageKey: 'icon',
-			largeImageText: "Vs. Moxie  " + MainMenuState.psychEngineVersion,
+			largeImageText: "Vs. Moxie v" + MainMenuState.psychEngineVersion,
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp : Std.int(startTimestamp / 1000),

@@ -414,7 +414,7 @@ class DialogueCharacterEditorState extends MusicBeatState
 		updateTextBox();
 	}
 
-	private static var DEFAULT_TEXT:String = 'Lorem ipsum dolor sit amet';
+	private static var DEFAULT_TEXT:String = 'Derek tiene un parásito atorado en él y no puede sacárselo.'; // translate it
 	function reloadText() {
 		if(daText != null) {
 			daText.killTheTimer();
