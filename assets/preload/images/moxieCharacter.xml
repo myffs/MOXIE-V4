@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="moxieCharacter.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="0" y="0" width="150" height="114"/>
+	<SubTexture name="idle0001" x="150" y="0" width="150" height="114"/>
+	<SubTexture name="select0000" x="300" y="0" width="159" height="140"/>
+	<SubTexture name="select0001" x="459" y="0" width="159" height="140"/>
+	<SubTexture name="select0002" x="618" y="0" width="159" height="140"/>
+	<SubTexture name="select0003" x="777" y="0" width="159" height="140"/>
+	<SubTexture name="select0004" x="0" y="140" width="159" height="140"/>
+	<SubTexture name="select0005" x="159" y="140" width="159" height="140"/>
+	<SubTexture name="select0006" x="318" y="140" width="159" height="140"/>
+	<SubTexture name="select0007" x="477" y="140" width="159" height="140"/>
+	<SubTexture name="select0008" x="636" y="140" width="159" height="140"/>
+	<SubTexture name="select0009" x="795" y="140" width="159" height="140"/>
+	<SubTexture name="select0010" x="0" y="280" width="159" height="140"/>
+	<SubTexture name="select0011" x="159" y="280" width="159" height="140"/>
+	<SubTexture name="select0012" x="318" y="280" width="159" height="140"/>
+	<SubTexture name="select0013" x="477" y="280" width="159" height="140"/>
+</TextureAtlas>
